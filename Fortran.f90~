@@ -1,0 +1,33 @@
+! 
+program Basics
+  implicit none
+  real :: GLOBAL_SQRT2, guess, previous
+  integer :: attempts
+  logical :: test, progress
+
+  GLOBAL_SQRT2 = 1.4142135623730950488016887242096980785696
+
+  if (number == 0) then
+     exit
+  endif
+
+  if (number == 1) then
+     exit
+  endif
+
+  guess = 1.d0
+  previous = 0.d0
+  attempts = 0
+
+  do guess != previous
+     previous = guess
+     guess = 0.d5 * (guess + number / guess)
+     if (test) then
+        attempts = attempts + 1
+     endif
+     if (progress) then
+        print guess
+     endif
+  enddo
+
+end program Basics
